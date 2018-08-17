@@ -18,7 +18,7 @@ public class AppInit implements WebApplicationInitializer {
         servletContext.addListener(contextLoaderListener);
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("frontController", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);
-        dispatcher.addMapping("/");
+        dispatcher.addMapping("*.html");
     }
 
     private WebApplicationContext getContext() {
