@@ -11,16 +11,16 @@
         <legend>Login</legend>
         <table>
             <tr>
-                <td><label for="username"> Username:</label></td>
-                <td><input name="username" id="username" type="text"/></td>
+                <td><form:label path="username"> Username:</form:label></td>
+                <td><form:input path="username"/></td>
             </tr>
             <tr>
-                <td><label for="password">Password:</label></td>
-                <td><input id="password" name="password" type="password"/></td>
+                <td><form:label path="password">Password:</form:label></td>
+                <td><form:input path="password"/></td>
             </tr>
             <tr>
                 <td></td>
-                <td><button type="submit">Login</button></td>
+                <td><form:button type="submit">Login</form:button></td>
             </tr>
         </table>
     </fieldset>

@@ -10,7 +10,8 @@ public class LoginController {
 
     @GetMapping("/login")
     public ModelAndView login() {
-        ModelAndView loginModelAndView = new ModelAndView("login/login");
+        UserCredential emptyCredential = new UserCredential();
+        ModelAndView loginModelAndView = new ModelAndView("login/login", "credential", emptyCredential);
         return loginModelAndView;
     }
 }
