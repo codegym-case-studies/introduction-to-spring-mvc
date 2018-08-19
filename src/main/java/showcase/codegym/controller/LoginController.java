@@ -1,5 +1,6 @@
 package showcase.codegym.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -8,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import showcase.codegym.service.CanNotResolveCredentialException;
 import showcase.codegym.service.UserService;
-import showcase.codegym.service.impl.UserServiceImpl;
 import showcase.codegym.viewmodel.UserCredential;
 import showcase.codegym.viewmodel.UserProfile;
 
@@ -16,7 +16,8 @@ import showcase.codegym.viewmodel.UserProfile;
 @RequestMapping("/login")
 public class LoginController {
 
-    UserService userService = UserServiceImpl.getInstance();
+    @Autowired
+    private UserService userService;
 
     @GetMapping()
     public ModelAndView login() {
