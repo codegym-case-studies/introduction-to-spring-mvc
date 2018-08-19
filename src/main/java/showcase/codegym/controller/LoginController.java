@@ -33,7 +33,7 @@ public class LoginController {
             ModelAndView loginModelAndView = new ModelAndView("dashboard/dashboard", "profile", sampleProfile);
             return loginModelAndView;
         } catch (CanNotResolveCredentialException e) {
-            e.printStackTrace();
+            System.out.println("INFO: " + credential.getUsername() + " tried to login with wrong credentials!");
             ModelAndView loginModelAndView = new ModelAndView("login/error");
             return loginModelAndView;
         }
