@@ -8,19 +8,19 @@
 <table>
     <tr>
         <td><b>Account: </b></td>
-        <td></td>
+        <td>${profile.username}</td>
     </tr>
     <tr>
         <td><b>Name: </b></td>
-        <td></td>
+        <td>${profile.name}</td>
     </tr>
     <tr>
         <td><b>Email: </b></td>
-        <td></td>
+        <td>${profile.email}</td>
     </tr>
     <tr>
         <td><b>Age: </b></td>
-        <td></td>
+        <td>${profile.age}</td>
     </tr>
 </table>
 </body>

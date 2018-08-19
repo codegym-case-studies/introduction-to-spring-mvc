@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import showcase.codegym.viewmodel.UserCredential;
+import showcase.codegym.viewmodel.UserProfile;
 
 @Controller
 @RequestMapping("/login")
@@ -20,7 +21,13 @@ public class LoginController {
 
     @PostMapping()
     public ModelAndView dashboard() {
-        ModelAndView loginModelAndView = new ModelAndView("dashboard/dashboard");
+        UserProfile sampleProfile = new UserProfile();
+        sampleProfile.setUsername("codegymstudent");
+        sampleProfile.setName("CodeGym Student");
+        sampleProfile.setAge(2);
+        sampleProfile.setEmail("student@codegym.vn");
+
+        ModelAndView loginModelAndView = new ModelAndView("dashboard/dashboard", "profile", sampleProfile);
         return loginModelAndView;
     }
 }
