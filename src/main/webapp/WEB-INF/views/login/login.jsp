@@ -6,7 +6,7 @@
 </head>
 <body>
 <h3>Home</h3>
-<form:form action="login" method="post" modelAttribute="credential">
+<form:form method="post" modelAttribute="credential">
     <fieldset>
         <legend>Login</legend>
         <table>
