@@ -7,6 +7,8 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import showcase.codegym.service.UserService;
+import showcase.codegym.service.impl.UserServiceImpl;
 
 @Configuration
 @EnableWebMvc
@@ -19,5 +21,10 @@ public class AppConfig {
         bean.setPrefix("/WEB-INF/views/");
         bean.setSuffix(".jsp");
         return bean;
+    }
+
+    @Bean
+    public UserService userService() {
+        return UserServiceImpl.getInstance();
     }
 }
