@@ -13,9 +13,9 @@ repositories {
 }
 
 dependencies {
-    compile ("org.springframework:spring-core:4.3.18.RELEASE")
-    compile ("org.springframework:spring-webmvc:4.3.18.RELEASE")
-    compile ("javax.servlet:javax.servlet-api:3.0.1")
-    compile ("taglibs:standard:1.1.2")
+    compile("org.springframework:spring-core:4.3.18.RELEASE")
+    compile("org.springframework:spring-webmvc:4.3.18.RELEASE")
+    compile("javax.servlet:javax.servlet-api:3.0.1")
+    compile("org.thymeleaf:thymeleaf-spring4:3.0.9.RELEASE")
     testCompile("junit:junit:4.12")
 }
