@@ -12,7 +12,8 @@ public class EmployeeController {
 
     @GetMapping()
     public ModelAndView employeeCreation() {
-        ModelAndView modelAndView = new ModelAndView("employee/create");
+        EmployeeDetails details = new EmployeeDetails();
+        ModelAndView modelAndView = new ModelAndView("employee/create", "details", details);
         return modelAndView;
     }
 }
